@@ -1,23 +1,15 @@
-import { Link } from "react-router-dom";
-import "../css/HomePage.css";
 
-const HomePage = () => {
+import '../css/HomePage.css'
+import { Link } from 'react-router-dom'
+
+export const HomePage = () => {
   return (
-    <div className="home-container">
-      <div className="home-content">
-        <h1>Welcome to BeingZero 🚀</h1>
-
-        <p>
-          Manage your orders, payments and dashboard easily.
-        </p>
-
-        <div className="home-links">
-          <Link to="/dashboard">Go to Dashboard</Link>
-
-          <Link to="/myorders">Go to My Orders</Link>
-
-          <Link to="/mypayments">Go to My Payments</Link>
-        </div>
+    <div className="homepage">
+      <h1>Welcome to Smart Artisan Assistant</h1>
+      <p>Track your production, earnings, and get AI-powered insights</p>
+      <div>
+        <Link to="/login">Login</Link>
+        <Link to="/register">Register</Link>
       </div>
     </div>
   );
