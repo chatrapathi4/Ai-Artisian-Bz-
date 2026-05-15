@@ -1,9 +1,15 @@
 {
-  "name": "backend",
+  "name": "artisan-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   },
   "repository": {
     "type": "git",
