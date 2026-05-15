@@ -1,16 +1,48 @@
-import { Link } from "react-router-dom"
-import "../css/Navbar.css"
+import { Link, useNavigate } from "react-router-dom";
+import "../css/Navbar.css";
+import logo from "../assets/bzlogo.png";
 
-export const Navbar = () => {
+const Navbar = () => {
+
+  const token = localStorage.getItem("token");
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+
+    localStorage.removeItem("token");
+
+    navigate("/login");
+  };
+
   return (
-    <div className="navbar">
-      <div className="logo">My App</div>
+    <nav className="navbar">
+      <img src={logo} alt="Logo" className="logo" />
+
+      <h1>BeingZero</h1>
+
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/myorders">My Orders</Link>
-        <Link to="/mypayments">My Payments</Link>
+
+        {!token ? (
+          <Link to="/login">Login</Link>
+        ) : (
+          <>
+            <Link to="/">Home</Link>
+
+            <Link to="/dashboard">Dashboard</Link>
+
+            <Link to="/myorders">My Orders</Link>
+
+            <Link to="/mypayments">My Payments</Link>
+
+            <button className="logout-btn" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        )}
+
       </div>
-    </div>
-  )
-}
+    </nav>
+  );
+};
+export default Navbar;
