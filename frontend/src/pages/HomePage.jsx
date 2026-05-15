@@ -1,3 +1,4 @@
+
 import '../css/HomePage.css'
 import { Link } from 'react-router-dom'
 
@@ -11,5 +12,6 @@ export const HomePage = () => {
         <Link to="/register">Register</Link>
       </div>
     </div>
-  )
+  );
 }
+export default HomePage;

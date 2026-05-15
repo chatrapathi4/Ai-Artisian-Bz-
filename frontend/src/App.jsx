@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import { Navbar } from "./components/Navbar"
@@ -9,6 +10,7 @@ import { MyPayments } from "./pages/MyPayments"
 import { LoginPage } from "./pages/LoginPage"
 import { RegisterPage } from "./pages/RegisterPage"
 import './App.css'
+
 
 const GOOGLE_CLIENT_ID = '216160325704-p90c0v8fgmd4i3605mt8d3mavlk9ttv9.apps.googleusercontent.com'
 
@@ -51,4 +53,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
