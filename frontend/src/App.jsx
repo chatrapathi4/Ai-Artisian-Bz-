@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Navbar } from "./components/Navbar"
-import { Footer } from "./components/Footer"
-import { Home } from "./pages/Home"
-import { Profile } from "./pages/Profile"
-import { Login } from "./pages/Login"
+import { HomePage } from "./pages/HomePage"
+import { Dashboard } from "./pages/Dashboard"
+import { MyOrders } from "./pages/MyOrders"
+import { MyPayments } from "./pages/MyPayments"
 import './App.css'
 function App() {
 
@@ -12,11 +12,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/myorders" element={<MyOrders />} />
+          <Route path="/mypayments" element={<MyPayments />} />
         </Routes>
-        <Footer />
       </Router>
     </>
   )
